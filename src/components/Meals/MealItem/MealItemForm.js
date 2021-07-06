@@ -5,7 +5,6 @@ import classes from "./MealItemForm.module.css";
 
 const MealItemForm = (props) => {
   const [amountisValid, setAmountIsValid] = useState(true);
-
   const amountInputRef = useRef();
 
   const submitHandler = (event) => {
@@ -22,7 +21,7 @@ const MealItemForm = (props) => {
       setAmountIsValid(false);
       return;
     }
-    
+
     props.onAddToCart(enteredAmountNum);
   };
 
